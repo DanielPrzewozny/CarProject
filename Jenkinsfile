@@ -18,7 +18,7 @@ pipeline {
         workspace = 'D:\\\\'
       }
       steps {
-        powershell 'bat \'dotnet restore D:\\\\CarProject\\\\CarProject\\\\CarProject.sln\''
+        powershell(script: 'bat \'dotnet restore D:\\\\CarProject\\\\CarProject\\\\CarProject.sln\'', returnStdout: true)
       }
     }
 
