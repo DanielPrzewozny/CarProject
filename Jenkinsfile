@@ -7,9 +7,18 @@ pipeline {
       }
     }
 
-    stage('Git') {
+    stage('Git Checkout') {
       steps {
         git(url: 'https://github.com/DanielPrzewozny/CarProject', branch: 'main', credentialsId: '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')
+      }
+    }
+
+    stage('Restore packages') {
+      environment {
+        workspace = 'D:'
+      }
+      steps {
+        powershell 'dotnet restore ${workspace}\\\\TimeTrackingSystem\\\\TimeTrackingSystem.sln'
       }
     }
 
