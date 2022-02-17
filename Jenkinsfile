@@ -15,7 +15,7 @@ pipeline {
 
     stage('Restore packages') {
       steps {
-        bat 'dotnet restore D:\\\\CarProject\\\\CarProject\\CarProject.sln'
+        sh 'dotnet restore D:\\\\CarProject\\\\CarProject\\CarProject.sln'
       }
     }
 
