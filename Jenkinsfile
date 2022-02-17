@@ -14,11 +14,8 @@ pipeline {
     }
 
     stage('Restore packages') {
-      environment {
-        workspace = 'D:'
-      }
       steps {
-        powershell 'Write-Host "second string"'
+        sh 'Write-Host "second string"'
       }
     }
 
