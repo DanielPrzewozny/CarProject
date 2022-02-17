@@ -15,7 +15,7 @@ pipeline {
 
     stage('Restore packages') {
       steps {
-        powershell(script: 'bat \'dotnet restore D:\\\\CarProject\\\\CarProject\\\\CarProject.sln\'', returnStdout: true)
+        bat 'dotnet restore D:\\\\CarProject\\\\CarProject\\CarProject.sln'
       }
     }
 
