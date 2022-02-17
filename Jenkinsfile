@@ -15,12 +15,15 @@ pipeline {
 
     stage('Restore packages') {
       environment {
-        workspace = 'D:'
+        workspace = 'D:\\\\'
       }
       steps {
-        powershell 'dotnet restore ${workspace}\\\\TimeTrackingSystem\\\\TimeTrackingSystem.sln'
+        powershell 'dotnet restore ${workspace}\\\\CarProject\\CarProject.sln'
       }
     }
 
+  }
+  environment {
+    workspace = 'D:\\\\CarProject'
   }
 }
