@@ -14,16 +14,10 @@ pipeline {
     }
 
     stage('Restore packages') {
-      environment {
-        workspace = 'D:\\\\'
-      }
       steps {
         powershell(script: 'bat \'dotnet restore D:\\\\CarProject\\\\CarProject\\\\CarProject.sln\'', returnStdout: true)
       }
     }
 
-  }
-  environment {
-    workspace = 'D:\\\\CarProject'
   }
 }
