@@ -14,6 +14,9 @@ pipeline {
     }
 
     stage('Restore packages') {
+      environment {
+        workspace = 'D:'
+      }
       steps {
         sh 'dotnet restore ${workspace}\\\\CarProject\\\\CarProject.sln'
       }
