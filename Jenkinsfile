@@ -15,7 +15,7 @@ pipeline {
 
     stage('Restore packages') {
       steps {
-        sh 'Write-Host "second string"'
+        pwsh 'Write-Host "second string"'
       }
     }
 
